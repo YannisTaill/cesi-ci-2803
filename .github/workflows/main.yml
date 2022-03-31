@@ -27,17 +27,11 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
-        run: echo Hello, world!
+        run: docker login -u $ {{secrets.DOCKER_USER}} -p ${{secrets.DOCKER_PASSWORD}}
 
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
-          ${{secrets.DOCKER_USER}}
-          
-          
-      - name: "Say hello Mona it's Monday"
-        run: echo $DOCKER_USER
-        env:
-          DOCKER_USER: ${{secrets.DOCKER_USER}}
+        
