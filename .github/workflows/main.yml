@@ -34,3 +34,10 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+          ${{secrets.DOCKER_USER}}
+          
+          
+      - name: "Say hello Mona it's Monday"
+        run: echo $DOCKER_USER
+        env:
+          DOCKER_USER: ${{secrets.DOCKER_USER}}
