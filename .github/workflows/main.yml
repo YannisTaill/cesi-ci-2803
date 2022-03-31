@@ -32,7 +32,7 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: sebkhedim/guestbook:1.0
+          tags: yannistaillendier/guestbook:1.0
           context: guestbook/
 
       - name: Login to GitHub Container Registry
